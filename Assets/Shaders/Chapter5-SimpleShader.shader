@@ -1,4 +1,4 @@
-Shader "Custom/Chapter 5/Simple Shader"
+Shader "Custom/Chapter5-Simple Shader"
 {
     Properties
     {
