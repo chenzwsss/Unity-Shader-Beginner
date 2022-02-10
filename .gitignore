@@ -4,3 +4,4 @@ Logs/
 *.csproj
 .vscode
 *.sln
+Temp/*

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SirnpleShaderMat
+  m_Name: SimpleShaderMat
   m_Shader: {fileID: 4800000, guid: 2074dbc12adeb47e395a0b2e9ee64abe, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
