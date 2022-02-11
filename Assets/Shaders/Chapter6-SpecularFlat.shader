@@ -73,5 +73,5 @@ Shader "Custom/Chapter6-SpecularFlat"
             ENDCG
         }
     }
-    // Fallback "Specular"
+    Fallback Off
 }

@@ -67,5 +67,5 @@ Shader "Custom/Chapter6-DiffuseVertexLevel"
             ENDCG
         }
     }
-    // Fallback "Diffuse"
+    Fallback Off
 }

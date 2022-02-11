@@ -65,5 +65,5 @@ Shader "Custom/Chapter6-DiffuseFlat"
             ENDCG
         }
     }
-    // Fallback "Diffuse"
+    Fallback Off
 }

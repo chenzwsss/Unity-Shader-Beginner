@@ -71,5 +71,5 @@ Shader "Custom/Chapter6-SpecularPixelLevel"
             ENDCG
         }
     }
-    // Fallback "Specular"
+    Fallback Off
 }

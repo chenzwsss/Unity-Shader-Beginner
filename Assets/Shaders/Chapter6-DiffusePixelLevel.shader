@@ -60,5 +60,5 @@ Shader "Custom/Chapter6-DiffusePixelLevel"
             ENDCG
         }
     }
-    // Fallback "Diffuse"
+    Fallback Off
 }

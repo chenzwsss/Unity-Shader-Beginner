@@ -82,5 +82,5 @@ Shader "Custom/Chapter6-SpecularVertexLevel"
             ENDCG
         }
     }
-    // Fallback "Specular"
+    Fallback Off
 }
