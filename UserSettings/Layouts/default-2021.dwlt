@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 605
     height: 1252
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 483.5
     height: 741
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -330,20 +330,20 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 664b0000
-    m_LastClickedID: 19302
-    m_ExpandedIDs: 00000000604b000000ca9a3b
+    m_SelectedIDs: 084c0000
+    m_LastClickedID: 19464
+    m_ExpandedIDs: 00000000fe4b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Textures
-      m_OriginalName: Textures
+      m_Name: Scenes
+      m_OriginalName: Scenes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 19310
+      m_UserData: 19468
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000604b0000
+    m_ExpandedIDs: 00000000fe4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,7 +569,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -322, y: 0}
+      snapOffset: {x: -327, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-scene-view-toolbar
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.8807857, y: -1.5950415, z: 0.70749617}
+    m_Target: {x: -0.36200142, y: 1.018919, z: 3.1816225}
     speed: 2
-    m_Value: {x: 0.8807857, y: -1.5950415, z: 0.70749617}
+    m_Value: {x: -0.36200142, y: 1.018919, z: 3.1816225}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,13 +788,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.28666517, y: 0.14641558, z: -0.04438021, w: -0.945742}
+    m_Target: {x: -0.1590483, y: 0.392659, z: -0.06914547, w: -0.9031922}
     speed: 2
-    m_Value: {x: -0.28666347, y: 0.1464147, z: -0.044379946, w: -0.94573635}
+    m_Value: {x: -0.15904713, y: 0.39265612, z: -0.06914496, w: -0.90318555}
   m_Size:
-    m_Target: 4.043896
+    m_Target: 17.780674
     speed: 2
-    m_Value: 4.043896
+    m_Value: 17.780674
   m_Ortho:
     m_Target: 0
     speed: 2

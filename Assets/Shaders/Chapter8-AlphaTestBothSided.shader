@@ -1,4 +1,4 @@
-Shader "Custom/Chapter8-AlphaTest"
+Shader "Custom/Chapter8-AlphaTestBothSided"
 {
     Properties
     {
@@ -19,6 +19,10 @@ Shader "Custom/Chapter8-AlphaTest"
         {
             // LightMode 标签是 Pass 标签中的一种，它用于定义该 Pass在 Unity 的光照流水线中的角色。只有定义了正确的 LightMode, 我们才能正确得到一些 Unity 的内置光照变瓜，例如_LightColor0。
             Tags { "LightMode"="ForwardBase" }
+
+            // Turn off culling
+            // 关闭剔除功能
+            Cull Off
 
             CGPROGRAM
 
