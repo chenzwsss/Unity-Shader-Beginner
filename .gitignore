@@ -5,3 +5,4 @@ Logs/
 .vscode
 *.sln
 Temp/*
+*.DS_Store
