@@ -6,3 +6,6 @@ Logs/
 *.sln
 Temp/*
 *.DS_Store
+.vs/
+obj/
+.vsconfig
