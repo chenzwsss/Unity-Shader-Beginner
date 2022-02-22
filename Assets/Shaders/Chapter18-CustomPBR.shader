@@ -5,7 +5,7 @@ Shader "Custom/Chapter18-CustomPBR"
         _Color ("Color", Color) = (1.0, 1.0, 1.0, 1.0)
         _MainTex ("Albedo", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0.0, 1.0)) = 0.5
-        _SpeccularColor ("Specular", Color) = (0.2, 0.2, 0.2)
+        _SpecularColor ("Specular", Color) = (0.2, 0.2, 0.2)
         _SpecularGlossMap ("Specular (RGB) Smoothness (A)", 2D) = "white" {}
         _BumpScale ("Bump Scale", Float) = 1.0
         _BumpMap ("Normal Map", 2D) = "bump" {}
@@ -39,7 +39,7 @@ Shader "Custom/Chapter18-CustomPBR"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float _Glossiness;
-            fixed3 _SpeccularColor;
+            fixed3 _SpecularColor;
             sampler2D _SpecularGlossMap;
             // float4 _SpecularGlossMap_ST;
             float _BumpScale;
@@ -105,6 +105,12 @@ Shader "Custom/Chapter18-CustomPBR"
 
             inline half CustomSmithJointGGXVisibilityTerm(half NdotL, half NdotV, half roughness)
             {
+                // Original formulation:
+                // lambda_v = (-1 + sqrt(a2 * (1 - NdotL2) / NdotL2 + 1)) * 0.5f;
+                // lambda_l = (-1 + sqrt(a2 * (1 - NdotV2) / NdotV2 + 1)) * 0.5f;
+                // G = 1 / (1 + lambda_v + lambda_l);
+
+                // Approximation of the above formulation (simplify the sqrt, not mathematically correct but close enough)
                 half a2 = roughness * roughness;
                 half lambdaV = NdotL * (NdotV * (1 - a2) + a2);
                 half lambdaL = NdotV * (NdotL * (1 - a2) + a2);
@@ -135,7 +141,7 @@ Shader "Custom/Chapter18-CustomPBR"
             {
                 half4 specGloss = tex2D(_SpecularGlossMap, i.uv);
                 specGloss.a *= _Glossiness;
-                half3 specColor = specGloss.rgb * _SpeccularColor.rgb;
+                half3 specColor = specGloss.rgb * _SpecularColor.rgb;
                 half roughness = 1 - specGloss.a;
 
                 half oneMinusReflectivity = 1 - max(max(specColor.r, specColor.g), specColor.b);
@@ -176,8 +182,8 @@ Shader "Custom/Chapter18-CustomPBR"
                 half mip = perceptualRoughness * 6;
                 half4 envMap = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflDir, mip);
                 half grazingTerm = saturate(1 - roughness) + (1 - oneMinusReflectivity);
-                half surfaceRedution = 1.0 / (roughness * roughness + 1.0);
-                half3 indirectSpecular = surfaceRedution * envMap.rgb * CustomFresnelLerp(specColor, grazingTerm, nv);
+                half surfaceReduction = 1.0 / (roughness * roughness + 1.0);
+                half3 indirectSpecular = surfaceReduction * envMap.rgb * CustomFresnelLerp(specColor, grazingTerm, nv);
 
                 half3 col = emisstionTerm + UNITY_PI * (diffuseTerm + specularTerm) * _LightColor0.rgb * nl * atten + indirectSpecular;
 
